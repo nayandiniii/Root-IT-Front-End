@@ -172,21 +172,33 @@
             transform: translateY(-50%);
             background-color: rgb(27, 161, 47);
         }
+        
+
         .text-container::after {
-            content: "See how we help our clients become the future best versions of themselves each and every day ";
-            color: white;
-            position: absolute;
-            top: calc(100% + 20px);
-            left: 50%;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 26px;
-            padding: 2px;
-            z-index: 2;
-            letter-spacing: 1px; /* Increased letter spacing */
-            line-height: 1.5; /* Increased line spacing */
-            transform: translateX(-50%);
-            text-align: center;
-        }
+    content: "See how we help our clients become the future best versions of themselves each and every day ";
+    color: white;
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+    padding: 2px 0px; /* Increase padding on the right side */
+    z-index: 2;
+    letter-spacing: 1px; /* Increased letter spacing */
+    line-height: 1.5; /* Increased line spacing */
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow */
+    animation: typing 5s steps(50, end) infinite; /* Apply looped animation */
+}
+
+@keyframes typing {
+    0% { width: 0; } /* Start from zero width */
+    100% { width: 100%; } /* Increase width to show all text */
+}
+
+
         /* New style for the light purple div */
         .custom-div {
             display: flex;
@@ -320,6 +332,39 @@
             text-align: center;
             margin-top: 20px;
         }
+        /* New style for the buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .custom-button {
+            background-color: #9c81ec;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+            margin: 0 5px; /* Add margin between buttons */
+        }
+        .custom-button:hover {
+            transform: scale(1.1); /* Zoom in effect on hover */
+        }
+        .right img {
+    animation: zoomInOut 5s infinite alternate; /* Apply animation */
+}
+
+@keyframes zoomInOut {
+    0% { transform: scale(1); } /* Start at normal scale */
+    50% { transform: scale(1.08); } /* Zoom in at 50% of the animation duration */
+    100% { transform: scale(1); } /* Return to normal scale */
+}
+.left img {
+    animation: zoomInOut 5s infinite alternate; /* Apply animation */
+}
+
+
     </style>
 </head>
 
@@ -363,19 +408,30 @@
                 <!-- Content for left div -->
                 <h1 class="head1">Gate Security Control</h1>
                 <p class="para1">Step into a new era to security with Root it advanced gate security control project. our team has developed a state-of-the-art solution to enhance access control, ensuring the safety and security of your premises. The project combines cutting-edge technology with design to create a robust gate security system.</p>
+                <!-- Buttons container directly below the left div -->
+        <div class="button-container">
+            <button class="custom-button">License Plate Recognization</button>
+            <button class="custom-button">Fully Customization Feature</button>
+        </div>
             </div>
             <div class="right">
-                <img src="rec1.png">
+                <img src="rec1.png" height="300px" width="500px">
             </div>
         </div>
         <div class="sub-div">
             <div class="left">
-                <img src="rect2.png">
+                <img src="rect2.png" height="300px" width="500px">
             </div>
             <div class="right">
                 <!-- Content for right div -->
                 <h1 class="head1">Canteen Management</h1>
                 <p class="para1">It's our innovative canteen project! Our team embarked on a mission to revolutionize the dining experience, creating a dynamic and vibrant space for our clients and their employees/students. The primary goal of this project is to enhance the overall dining experience through thoughtful design, efficient operations, and a commitment to quality.</p>
+            <!-- Buttons container directly below the left div -->
+        <div class="button-container">
+            <button class="custom-button">User friendly UI</button>
+            <button class="custom-button">Sustainability Initiatives</button>
+            <button class="custom-button">User Freedom</button>
+        </div>
             </div>
         </div>
         <div class="sub-div">
@@ -383,11 +439,17 @@
                 <!-- Content for left div -->
                 <h1 class="head1">Hostel Management</h1>
                 <p class="para1">Discover the next level of hostel management with Root it's innovative soltion. Our hostel management project aims to streamline and enhance the entire hostel experience, providing administrators, residents, and staff with powerful toold for efficient operations and improved living conditions.</p>
+            <!-- Buttons container directly below the left div -->
+        <div class="button-container">
+            <button class="custom-button">Fully responsive</button>
+            <button class="custom-button">Role Based Control</button>
+        </div>
             </div>
             <div class="right">
-                <img src="rect3.png">
+                <img src="rect3.png" height="300px" width="500px">
             </div>
         </div>
+    
     </div><br><br><br>
     <!-- New div below the custom-div -->
     <div class="last-div">
